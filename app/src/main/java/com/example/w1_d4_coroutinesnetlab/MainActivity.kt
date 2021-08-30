@@ -26,9 +26,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
             val imgUrl = URL(
-                "https://images.pexels.com/photos/730344/" +
-                "pexels-photo-730344.jpeg?" +
-                        "auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+                "https://placedog.net/640/480?random"
             )
             lifecycleScope.launch(Dispatchers.Main) {
                 val myImg = async(Dispatchers.IO) { getImg(imgUrl) }
